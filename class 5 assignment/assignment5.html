@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Assignment</title>
+        <link rel="stylesheet" href="assignment5.css" />
+    </head>
+    <body>
+        <h2>Arrays in Javascript</h2>
+
+        <p>Input Array:
+            <span id="inputDisplay"></span>
+        </p>
+
+        <p>Output Array:
+            <span id="outputDisplay"></span>
+        </p>
+
+        <button onclick="multiplyFun(10)">Multiply by 10</button>
+        <button onclick="multiplyFun(5)">Multiply by 5</button>
+        <button onclick="divFun(9)">Divide by 9</button>
+        <button onclick="divFun(12)">Divide by 12</button>
+        <button onclick="subFun(30)">Subtract by 30</button>
+        <button onclick="subFun(25)">Subtract by 25</button>
+        <button onclick="addFun(15)">Add by 15</button>
+        <button onclick="addFun(20)">Add by 20</button>
+
+        <script>
+        var array1=[2,8,26,54];
+        var array2=array1;
+        document.getElementById('inputDisplay').innerHTML=array1;
+        function multiplyFun(mulNum){
+            array2 = array2.map(param1 => param1 * mulNum)
+            document.getElementById('outputDisplay').innerHTML = array2;
+        }
+
+        function addFun(addNum){
+            array2=array2.map(param1 => param1 + addNum)
+            document.getElementById('outputDisplay').innerHTML = array2;
+        }
+
+        function subFun(subNum){
+            array2=array2.map(param1 => param1 - subNum)
+            document.getElementById('outputDisplay').innerHTML = array2;
+        }
+
+        function divFun(divNum){
+            array2=array2.map(param1 => param1 / divNum)
+            document.getElementById('outputDisplay').innerHTML = array2;
+        }
+
+    </script>
+    </body>
+</html>
